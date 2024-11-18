@@ -1,0 +1,214 @@
+++ INSTALAR TEMA PAPIRUS
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt-get update
+sudo apt-get install papirus-icon-theme
+sudo apt-get install epapirus-icon-theme 
+
+++ RUTA DE LOS ICONOS
+/usr/share/icons (Recordar para instalar temas)
+
+++ INSTALAR GRUB-CUSTOMIZER
+sudo apt install grub-customizer
+
+
+++ INSTALAR GNOME-TWEAK-TOOL
+sudo apt-get install gnome-tweaks
+
+
+++ INSTALAR GPARTED
+sudo apt-get install gparted
+
+
+++ INSTALAR ARK
+sudo apt-get install ark
+
+
+++ INSTALAR CLONEZILLA
+sudo apt-get install clonezilla
+
+
+++ INSTALAR GCHEMPAINT
+sudo apt-get install gchempaint
+
+
+++ INSTALAR KDENLIVE
+sudo apt-get install kdenlive
+
+
+++ INSTALAR MARBLE
+sudo apt-get install marble
+
+
+++ INSTALAR KMPLOT
+sudo apt-get install kmplot
+
+
+++ INSTALAR UBUNTU-RESTRICTED-EXTRAS
+sudo apt-get install ubuntu-restricted-extras
+
+
+++ INSTALAR LIBREOFFICE (ESPAÑOL)
+sudo apt-get install libreoffice-l10n-es
+
+
+++ INSTALAR ARDUINO
+sudo apt-get install arduino
+
+
+++ INSTALAR KALZIUM
+sudo apt-get install kalzium
+
+
+++ INSTALAR FRITZING
+sudo ap-get install fritzing
+
+
+++ INSTALAR NEOFETCH
+sudo apt install neofetch
+neofetch
+sudo su
+/etc/bash.bashrc
+nano bash.bashrc
+"Agregar al final" neofetch
+
+nano ~/.config/neofetch/config.conf 
+"Archivo para editar las configuraciones"
+
+
+++ INSTALAR PIP
+sudo apt-get install python3-pip
+
+
+++ INSTALAR LIBRERIAS DE PYTHON
+pip install pandas --break-system-packages
+pip install numpy --break-system-packages
+pip install matplotlib --break-system-packages
+pip install seaborn --break-system-packages
+pip install plotly --break-system-packages
+pip install pygame --break-system-packages
+pip install tk --break-system-packages
+pip install bokeh --break-system-packages
+pip install scipy --break-system-packages
+pip install scikit-learn --break-system-packages
+pip install pyinstaller --break-system-packages 
+
+
+++ INSTALAR OBS STUDIO
+sudo apt-get install obs-studio
+
+
+
+++ INSTALAR QBITTORRENT
+suudo apt-get install qbittorrent
+
+
+++ INSTALAR SNAPD
+sudo apt install snapd
+
+
+++ INSTALAR BLUEMAIL
+sudo snap install bluemail
+
+
+
+++ INSTALAR VISUAL STUDIO CODE
+sudo snap install code --classic
+
+
+++ INSTALAR NOTEPAD
+sudo snap install notepad-plus-plus
+
+
+++ INSTALAR ECLIPSE
+sudo snap install eclipse --classic
+
+
+++ INSTALAR NETBEANS
+sudo snap install netbeans --classic
+
+
+++ INSTALAR SUBLIME TEXT
+sudo snap install sublime-text --classic
+
+
+++ INSTALAR ANDROID STUDIO
+sudo snap install android-studio --classic
+
+
+++ INSTALAR TELEGRAM
+sudo snap install telegram-desktop
+
+
+++ INSTALAR WHATSIE
+sudo snap install whatsie
+
+
+++ INSTALAR ZOOM
+sudo snap install zoom-client
+
+
+++ INSTALAR TEAMS
+sudo snap install teams-for-linux
+
+
+++ INSTALAR SPOTIFY
+sudo snap install spotify
+
+
+++ INSTALAR AUDACITY
+sudo snap install audacity
+
+
+++ INSTALAR PLAYARY
+sudo snap install playary
+
+++ INSTALAR POPCORNTIME
+https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip
+sudo mkdir /opt/popcorn-time
+sudo apt update && sudo apt install unzip libcanberra-gtk-module libgconf-2-4 libatomic1
+sudo unzip Popcorn-Time-0.5.1-linux64.zip -d /opt/popcorn-time
+sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time
+sudo nano /usr/share/applications/popcorntime.desktop
+--- Copiar la siguiente estructura en el archivo anterior: 
+[Desktop Entry]
+Version = 1.0
+Type = Application
+Terminal = false
+Name = Popcorn Time
+Exec = /usr/bin/popcorn-time
+Icon = /opt/popcorn-time/src/app/images/icon.png
+Categories = Application;
+
+
+
+
+
+
+
+
+++ BUSQUEDA DE MAS SNAPS
+https://snapcraft.io/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
