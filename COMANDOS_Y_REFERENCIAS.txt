@@ -180,6 +180,48 @@ Icon = /opt/popcorn-time/src/app/images/icon.png
 Categories = Application;
 
 
+++ INSTALAR HTOP
+sudo snap install htop
+
+
+++ INSTALAR GLATE (TRADUCTOR)
+sudo snap install glate
+
+
+++ INSTALAR OPERA
+sudo snap install opera
+
+
+++ INSTALAR FREEMIND
+sudo snap install freemind
+
+
+++ INSTALAR PLOTS
+sudo snap install plots
+
+
+++ INSTALAR MAPASCII (Mapa en linea de comandos)
+sudo snap install mapscii
+
+
+++ INSTALAR VLC
+sudo snap install vlc
+
+
+++ INSTALAR SHOTCUT
+sudo snap install shotcut --classic
+
+
+++ INSTALAR CHEESE
+sudo snap install cheese
+
+++ INSTALAR SIMPLE-SCAN
+sudo apt-get install simple-scan
+
+
+
+
+
 
 
 
