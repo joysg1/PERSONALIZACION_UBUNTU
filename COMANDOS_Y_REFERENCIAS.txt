@@ -264,6 +264,13 @@ sudo snap install mapton
 sudo snap install graphs
 
 
+++ INSTALAR NWIPE
+sudo apt install nwipe
+sudo nwipe
+
+
+
+
 
 
 ++ BUSQUEDA DE MAS SNAPS
