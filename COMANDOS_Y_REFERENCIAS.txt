@@ -4,6 +4,10 @@ sudo apt-get update
 sudo apt-get install papirus-icon-theme
 sudo apt-get install epapirus-icon-theme 
 
+++ INSTALAR TEMA FLAT REMIX
+sudo snap install flat-remix
+
+
 ++ RUTA DE LOS ICONOS
 /usr/share/icons (Recordar para instalar temas)
 
@@ -215,15 +219,49 @@ sudo snap install shotcut --classic
 ++ INSTALAR CHEESE
 sudo snap install cheese
 
+
 ++ INSTALAR SIMPLE-SCAN
 sudo apt-get install simple-scan
 
 
+++ INSTALAR LABPLOT
+sudo snap install labplot
 
 
+++ INSTALAR PYRESISTORS
+sudo snap install pyresistors
 
 
+++ INSTALAR HEIMER (MIND MAP)
+sudo snap install heimer
 
+
+++ INSTALAR STELLARIUM
+sudo snap install stellarium-daily
+
+
+++ INSTALAR ULTIMATE VIDEO DOWNLOADER
+sudo snap install ultimate-media-downloader
+
+
+++ INSTALAR KSTARS
+sudo snap install kstars
+
+
+++ INSTALAR WEKA
+sudo snap install weka
+
+
+++ INSTALAR QALCULATE
+sudo snap install qalculate
+
+
+++ INSTALAR MAPTON
+sudo snap install mapton
+
+
+++ INSTALAR GRAPHS
+sudo snap install graphs
 
 
 
