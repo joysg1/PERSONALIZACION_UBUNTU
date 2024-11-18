@@ -269,7 +269,10 @@ sudo apt install nwipe
 sudo nwipe
 
 
-
+++ INSTALAR PHOTOREC
+sudo apt -y install testdisk
+sudo photorec
+Tutorial_completo_de_uso: https://www.digitalocean.com/community/tutorials/photorec-recover-deleted-files-in-linux-ubuntu
 
 
 
