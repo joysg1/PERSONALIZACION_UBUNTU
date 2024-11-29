@@ -4,12 +4,14 @@ sudo apt-get update
 sudo apt-get install papirus-icon-theme
 sudo apt-get install epapirus-icon-theme 
 
+
 ++ INSTALAR TEMA FLAT REMIX
 sudo snap install flat-remix
 
 
 ++ RUTA DE LOS ICONOS
 /usr/share/icons (Recordar para instalar temas)
+
 
 ++ INSTALAR GRUB-CUSTOMIZER
 sudo apt install grub-customizer
@@ -165,6 +167,7 @@ sudo snap install audacity
 
 ++ INSTALAR PLAYARY
 sudo snap install playary
+
 
 ++ INSTALAR POPCORNTIME
 https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip
