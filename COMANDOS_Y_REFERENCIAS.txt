@@ -170,12 +170,18 @@ sudo snap install playary
 
 
 ++ INSTALAR POPCORNTIME
-https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip
+wget -c https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip
+
 sudo mkdir /opt/popcorn-time
+
 sudo apt update && sudo apt install unzip libcanberra-gtk-module libgconf-2-4 libatomic1
+
 sudo unzip Popcorn-Time-0.5.1-linux64.zip -d /opt/popcorn-time
+
 sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time
+
 sudo nano /usr/share/applications/popcorntime.desktop
+
 --- Copiar la siguiente estructura en el archivo anterior: 
 [Desktop Entry]
 Version = 1.0
