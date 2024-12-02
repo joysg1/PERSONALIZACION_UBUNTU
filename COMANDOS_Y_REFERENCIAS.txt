@@ -107,6 +107,7 @@ sudo apt-get install obs-studio
 
 ++ INSTALAR QBITTORRENT
 sudo apt-get install qbittorrent
+sudo snap install qbittorrent-arnatious
 
 
 ++ INSTALAR SNAPD
