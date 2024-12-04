@@ -66,7 +66,7 @@ sudo apt-get install kalzium
 
 
 ++ INSTALAR FRITZING
-sudo ap-get install fritzing
+sudo apt-get install fritzing
 
 
 ++ INSTALAR NEOFETCH
