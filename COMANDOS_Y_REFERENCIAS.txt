@@ -286,6 +286,9 @@ sudo photorec
 Tutorial_completo_de_uso: https://www.digitalocean.com/community/tutorials/photorec-recover-deleted-files-in-linux-ubuntu
 
 
+++ HABILITAR SOPORTE PPA
+sudo apt install software-properties-common
+
 
 ++ BUSQUEDA DE MAS SNAPS
 https://snapcraft.io/
