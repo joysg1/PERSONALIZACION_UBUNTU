@@ -308,7 +308,7 @@ sudo apt-get install gdebi
 
 
 ++ INSTALAR VIRTUALBOX
-Realizar el proceso bajando el .deb de la pagina web. 
+Realizar el proceso bajando el .deb de la pagina web, agregar el usuario al grupo y luego instalar las extensiones. 
 
 
 sudo usermod -aG vboxusers $USER
