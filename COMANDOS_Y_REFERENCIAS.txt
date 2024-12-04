@@ -303,6 +303,31 @@ apt update
 apt install softmaker-freeoffice-2024
 
 
+++ INSTALAR VIRTUALBOX
+sudo apt install curl wget gnupg2 lsb-release -y
+
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/vbox.gpg
+
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox.gpg
+
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+
+sudo apt update
+
+sudo apt install -y linux-headers-$(uname -r) dkms
+
+sudo apt install virtualbox-7.0 -y
+
+wget https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack
+
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack
+
+sudo usermod -aG vboxusers $USER
+
+newgrp vboxusers
+
+
+
 ++ HABILITAR SOPORTE PPA
 sudo apt install software-properties-common
 
