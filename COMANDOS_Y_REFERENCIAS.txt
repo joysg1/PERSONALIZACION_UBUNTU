@@ -324,6 +324,10 @@ sudo usermod -aG vboxusers $USER
 newgrp vboxusers
 
 
+++ INSTALAR SYNAPTIC
+sudo apt-get install synaptic apt-xapian-index software-properties-gtk
+
+
 
 ++ HABILITAR SOPORTE PPA
 sudo apt install software-properties-common
