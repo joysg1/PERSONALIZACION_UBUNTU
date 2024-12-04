@@ -5,6 +5,14 @@ sudo apt-get install papirus-icon-theme
 sudo apt-get install epapirus-icon-theme 
 
 
+++ INSTALAR GOOGLE CHROME
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+
+
 ++ INSTALAR TEMA FLAT REMIX
 sudo snap install flat-remix
 
