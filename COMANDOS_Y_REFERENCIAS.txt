@@ -328,6 +328,17 @@ newgrp vboxusers
 sudo apt-get install synaptic apt-xapian-index software-properties-gtk
 
 
+++ INSTALAR CHEMCANVAS
+Bajarlo desde la siguiente pagina: https://github.com/ksharindam/chemcanvas?tab=readme-ov-file
+
+Recordar bajar el appimage y darle permisos de ejecucion con:
+sudo chmod +x <nombre_archivo>
+./<nombre_archivo>
+
+Si aparecen errores de fuse, seguir este tutorial:
+https://docs.appimage.org/user-guide/troubleshooting/fuse.html
+
+
 
 ++ HABILITAR SOPORTE PPA
 sudo apt install software-properties-common
