@@ -54,7 +54,7 @@ sudo apt-get install ubuntu-restricted-extras
 
 
 ++ INSTALAR LIBREOFFICE (ESPAÑOL)
-sudo apt-get install libreoffice-l10n-es
+sudo apt-get install libreoffice libreoffice-help-es libreoffice-l10n-es
 
 
 ++ INSTALAR ARDUINO
