@@ -361,6 +361,10 @@ sudo apt install software-properties-common
 https://snapcraft.io/
 
 
+++ TRANSFORMAR VHDX a VDI 
+VBoxManage clonemedium disk /home/userle/BHR-JSALCEDO.VHDX /home/userle/BHR-JSALCEDO.vdi --format VDI
+
+
 
 
 
