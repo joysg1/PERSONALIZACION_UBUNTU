@@ -369,9 +369,9 @@ VBoxManage clonemedium disk /home/userle/BHR-JSALCEDO.VHDX /home/userle/BHR-JSAL
 sudo e4defrag /dev/sda*  
 --- Nota: podemos reemplazar sda por la unidad correspondiente, el * significa que se seleccionan todas las particiones.
 
---- Nota: es importante indicar que la desfragmentacion de unidades exfat no esta oficialmente soportada en linux.
+--- Nota: es importante indicar que la desfragmentación de unidades exfat no está oficialmente soportada en linux.
 
---- Nota: es recomendable realizar la desfragmentacion cada mes no con tanta frecuencia. 
+--- Nota: es recomendable realizar la desfragmentación cada mes, no con tanta frecuencia. 
 
 ++ LISTAR DISCOS
 sudo fdisk --list
