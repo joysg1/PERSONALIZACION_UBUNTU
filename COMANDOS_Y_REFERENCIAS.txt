@@ -370,7 +370,8 @@ sudo e4defrag /dev/sda*
 --- Nota: podemos reemplazar sda por la unidad correspondiente, el * significa que se seleccionan todas las particiones.
 
 
-
+++ LISTAR DISCOS
+sudo fdisk --list
 
 
 
