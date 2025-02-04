@@ -1,1 +1,19 @@
+Para reparar un disco que no sea reconocido en linux y que en gparted aparezca error de I/O debemos seguir los siguientes pasos:
+
+1. Instalar la herramienta gdisk en linux:
+
+sudo apt-get install gdisk  # En sistemas basados en Debian/Ubuntu
+sudo yum install gdisk      # En sistemas basados en RedHat/CentOS
+
+2. Ejecuta gdisk para reparar el disco:
+
+sudo gdisk /dev/sdX
+
+3. Una vez dentro de gdisk, puedes intentar varias acciones:
+
+Verificar y corregir la tabla GPT:
+Ingresa al modo de recuperación con r y luego utiliza v para verificar la tabla GPT.
+Si se detectan errores, puedes intentar repararlos con el comando w para escribir la tabla GPT reparada.
+
+4. Formatear la unidad usando el administrador de discos de Windows.
 
