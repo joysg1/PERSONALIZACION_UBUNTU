@@ -377,6 +377,21 @@ sudo e4defrag /dev/sda*
 sudo fdisk --list
 
 
+++ INSTALAR PAQUETES EDUCATIVOS
+
+sudo apt-get install astro-education
+
+sudo apt-get install ezgo-education
+
+sudo apt-get install games-education
+
+sudo apt-get install junior-education
+
+sudo apt-get install kdeedu
+
+
+
+
 
 
 
