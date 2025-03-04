@@ -11,9 +11,12 @@ sudo gdisk /dev/sdX
 
 3. Una vez dentro de gdisk, puedes intentar varias acciones:
 
-Verificar y corregir la tabla GPT:
-Ingresa al modo de recuperación con r y luego utiliza v para verificar la tabla GPT.
-Si se detectan errores, puedes intentar repararlos con el comando w para escribir la tabla GPT reparada.
+--- Verificar y corregir la tabla GPT:
+--- Ingresa al modo de recuperación con r y luego utiliza v para verificar la tabla GPT.
+--- Si se detectan errores, puedes intentar repararlos con el comando w para escribir la tabla GPT reparada.
 
 4. Formatear la unidad usando el administrador de discos de Windows.
 
+5. Probar la copia de archivos usando windows.
+
+6. Nota: hemos detectado que una vez hecho este procedimiento la unidad es usable en Windows mas no en sitemas basados en Linux. 
