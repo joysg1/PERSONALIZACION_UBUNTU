@@ -353,6 +353,12 @@ sudo apt-get install p7zip-full
 7z x PACKAGE.7z <para descomprimir un archivo una vez estemos en la ruta>
 
 
+++ INSTALAR VARIETY (GESTOR DE FONDOS)
+sudo add-apt-repository ppa:variety/stable
+sudo apt update
+sudo apt install variety
+
+
 ++ HABILITAR SOPORTE PPA
 sudo apt install software-properties-common
 
