@@ -6,7 +6,6 @@ sudo apt-get install epapirus-icon-theme
 
 
 ++ INSTALAR CONKY MANAGER
-
 sudo add-apt-repository ppa:ubuntuhandbook1/conkymanager2
 
 sudo apt update 
@@ -15,7 +14,6 @@ sudo apt install conky-manager2
 
 
 ++ INSTALAR GOOGLE CHROME
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 sudo dpkg -i google-chrome-stable_current_amd64.deb
