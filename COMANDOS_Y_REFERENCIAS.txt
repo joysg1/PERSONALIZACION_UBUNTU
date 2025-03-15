@@ -442,6 +442,7 @@ VBoxManage clonemedium disk /home/userle/BHR-JSALCEDO.VHDX /home/userle/BHR-JSAL
 
 
 ++ DESFRAGMENTAR DISCO DURO 
+
 sudo e4defrag /dev/sda*  
 --- Nota: podemos reemplazar sda por la unidad correspondiente, el * significa que se seleccionan todas las particiones.
 
