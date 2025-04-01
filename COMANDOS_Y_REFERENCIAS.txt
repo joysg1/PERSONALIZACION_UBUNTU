@@ -473,7 +473,9 @@ sudo apt-get install kdeedu
 sudo snap install firmware-updater
 
 
+++ MONTAR ARCHIVOS VHDX:
 
+guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
 
 
 
