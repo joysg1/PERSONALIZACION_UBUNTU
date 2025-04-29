@@ -477,9 +477,14 @@ sudo snap install firmware-updater
 
 guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
 
+
 ++ PONER CONTRASEÑA A PIHOLE
 
 sudo pihole setpassword 
+
+--- Nota: Actualmente pihole esta instalado en ubuntu, por ende es recomendable actualizar 
+el sistema cada domingo y mantener la jurisdiccion de pihole en la subred .5 no en la principal
+esto nos ayuda a que cuando se interrumpa el pihole no se pierda conectividad. 
 
 
 
