@@ -450,6 +450,7 @@ sudo e4defrag /dev/sda*
 
 --- Nota: es recomendable realizar la desfragmentación cada mes, no con tanta frecuencia. 
 
+
 ++ LISTAR DISCOS
 
 sudo fdisk --list
