@@ -479,7 +479,7 @@ sudo snap install firmware-updater
 guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
 
 
-++ PONER CONTRASEÑA A PIHOLE
+++ PONER CONTRASEÑA A PIHOLE:
 
 sudo pihole setpassword 
 
