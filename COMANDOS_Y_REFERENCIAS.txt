@@ -139,9 +139,11 @@ pip install imbalanced-learn --break-system-packages
 ---------------------------------
 
 ++ Comando para instalar todas a la vez: 
+
 pip install pandas numpy matplotlib seaborn plotly pygame tk bokeh scipy scikit-learn pyinstaller imbalanced-learn --break-system-packages
 
 ++ Comando para comprobar la instalacion listando las librerias:
+
 pip list
 
 
