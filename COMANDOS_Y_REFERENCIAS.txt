@@ -418,6 +418,7 @@ https://docs.appimage.org/user-guide/troubleshooting/fuse.html
 ++ INSTALAR DESCOMPRESOR 7ZIP
 
 sudo apt-get install p7zip-full
+
 7z x PACKAGE.7z <para descomprimir un archivo una vez estemos en la ruta>
 
 
