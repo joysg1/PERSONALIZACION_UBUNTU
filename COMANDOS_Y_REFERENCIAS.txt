@@ -9,9 +9,7 @@ sudo apt-get install epapirus-icon-theme
 ++ INSTALAR CONKY MANAGER
 
 sudo add-apt-repository ppa:ubuntuhandbook1/conkymanager2
-
 sudo apt update 
-
 sudo apt install conky-manager2
 
 
