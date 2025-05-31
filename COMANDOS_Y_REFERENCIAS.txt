@@ -145,6 +145,10 @@ pip install pandas numpy matplotlib seaborn plotly pygame tk bokeh scipy scikit-
 pip list
 
 
+++ Comando para actualizar todas las librerias a la vez:
+pip list --outdated  | cut -d = -f 1 | xargs -n1 pip install -U --break-system-packages
+
+
 ++ INSTALAR OBS STUDIO
 
 sudo apt-get install obs-studio
