@@ -479,6 +479,11 @@ sudo apt-get install kdeedu
 sudo snap install firmware-updater
 
 
+++ INSTALAR REMMINA
+
+sudo apt-get install remmina
+
+
 ++ MONTAR ARCHIVOS VHDX:
 
 guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
