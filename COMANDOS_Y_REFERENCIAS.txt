@@ -483,6 +483,8 @@ sudo snap install firmware-updater
 
 sudo apt-get install remmina
 
+--- Nota: este cliente sirve para acceder via rdp de manera muy optima.
+
 
 ++ MONTAR ARCHIVOS VHDX:
 
