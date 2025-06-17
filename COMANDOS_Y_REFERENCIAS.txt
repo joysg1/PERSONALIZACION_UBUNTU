@@ -501,6 +501,11 @@ esto nos ayuda a que cuando se interrumpa la red o el suministro electrico, al v
 el pihole no ocasione perdidas de conexion o problemas.
 
 
+++ SOLUCIONAR ERRORES DE PAQUETES ROTOS:
+sudo apt clean
+sudo apt autoremove
+
+
 
 
 
