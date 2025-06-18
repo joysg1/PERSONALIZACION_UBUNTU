@@ -505,6 +505,10 @@ el pihole no ocasione perdidas de conexion o problemas.
 sudo apt clean
 sudo apt autoremove
 
+++ INSTALAR SMARTOOLS (HERRAMIENTA PARA DIAGNOSTICAR DISCOS DUROS EN LINUX)
+sudo apt install smartmontools
+sudo smartctl -t short /dev/sdX (Ejecutar la prueba)
+sudo smartctl -a /dev/sdX (Ver resultados de la prueba, recordar esperar unos minutos)
 
 
 
