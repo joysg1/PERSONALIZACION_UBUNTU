@@ -512,7 +512,7 @@ sudo smartctl -t short /dev/sdX (Ejecutar la prueba)
 sudo smartctl -a /dev/sdX (Ver resultados de la prueba, recordar esperar unos minutos)
 
 
-++ CONVERTIR VHDX a VDI (PARA MONTAR EN VITUALBOX)
+++ CONVERTIR VHDX a VDI (PARA MONTAR EN VIRTUALBOX)
 
 Nota: recordar usar medicat para generar el VHDX
 Comando: VBoxManage clonehd /ruta/al/archivo.VHDX /ruta/al/nuevo_archivo.vdi --format vdi
