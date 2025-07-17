@@ -19,4 +19,4 @@ sudo gdisk /dev/sdX
 
 5. Probar la copia de archivos usando windows.
 
-6. Nota: hemos detectado que una vez hecho este procedimiento la unidad es usable en Windows mas no en sitemas basados en Linux. 
+6. Nota: hemos detectado que una vez hecho este procedimiento la unidad puede usarse en Windows mas no en sitemas basados en Linux. 
