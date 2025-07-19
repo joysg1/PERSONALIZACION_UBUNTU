@@ -502,6 +502,7 @@ el pihole no ocasione perdidas de conexion o problemas.
 
 
 ++ SOLUCIONAR ERRORES DE PAQUETES ROTOS:
+
 sudo apt clean
 sudo apt autoremove
 
