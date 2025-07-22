@@ -443,7 +443,7 @@ https://snapcraft.io/
 
 ++ TRANSFORMAR VHDX a VDI 
 
-VBoxManage clonemedium disk /home/userle/BHR-JSALCEDO.VHDX /home/userle/BHR-JSALCEDO.vdi --format VDI
+VBoxManage clonemedium disk /home/userle/nom.VHDX /home/userle/nom.vdi --format VDI
 
 
 ++ DESFRAGMENTAR DISCO DURO 
