@@ -1,5 +1,6 @@
 Para reparar un disco que no sea reconocido en linux y que en gparted aparezca error de I/O debemos seguir los siguientes pasos:
 
+
 1. Instalar la herramienta gdisk en linux:
 
 sudo apt-get install gdisk  # En sistemas basados en Debian/Ubuntu
