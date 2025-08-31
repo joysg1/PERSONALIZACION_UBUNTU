@@ -4,7 +4,6 @@ sudo apt update
 sudo apt install snapd
 sudo snap install numix-icon-theme
 
-
 ++ INSTALAR TEMA PAPIRUS
 
 sudo add-apt-repository ppa:papirus/papirus
