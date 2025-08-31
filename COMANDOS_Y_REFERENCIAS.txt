@@ -22,9 +22,7 @@ sudo apt install conky-manager2
 ++ INSTALAR GOOGLE CHROME
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-
 
 
 ++ INSTALAR TEMA FLAT REMIX
