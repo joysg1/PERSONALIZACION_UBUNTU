@@ -30,6 +30,12 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo snap install flat-remix
 
 
+++ INSTALAR IMAGEMAGICK
+
+sudo apt-get install imagemagick
+
+
+
 ++ RUTA DE LOS ICONOS
 
 /usr/share/icons (Recordar para instalar temas)
