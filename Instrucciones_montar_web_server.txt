@@ -1,1 +1,6 @@
+++ Ejecutar en terminal los siguientes comandos:
+--- sudo apt install apache2 php
+--- Al terminal la instalación abrir el navegador y escribir la ip de nuestro equipo
+---- Nota: Para navegar al directorio donde se encuentra el sitio web podemos hacerlo mediante el comando:
+cd /var/www/html
 
