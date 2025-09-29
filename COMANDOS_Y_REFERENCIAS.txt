@@ -1,3 +1,8 @@
+++ INSTALAR WHOIS
+
+sudo apt install whois
+
+
 ++ INSTALAR TEMA NUMIX
 
 sudo apt update
