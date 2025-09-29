@@ -3,4 +3,6 @@
 --- Al terminal la instalación abrir el navegador y escribir la ip de nuestro equipo
 ---- Nota: Para navegar al directorio donde se encuentra el sitio web podemos hacerlo mediante el comando:
 cd /var/www/html
+---- Nota: Se nos mostrará un archivo llamado index.html, recordemos que este archivo podemos reemplazarlo para
+tener un sitio web personalizado 
 
