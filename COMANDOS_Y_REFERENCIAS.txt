@@ -2,6 +2,10 @@
 
 sudo apt install whois
 
+++ INSTALAR OPEN VPN
+
+sudo apt get install openvpn
+
 
 ++ INSTALAR TEMA NUMIX
 
