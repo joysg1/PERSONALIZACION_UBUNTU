@@ -2,6 +2,9 @@
 sudo apt-get install filezilla
 
 
+++ INSTALAR SOCAT (TELNET)
+sudo apt-get install socat
+
 
 ++ INSTALAR OPEN SSH
 sudo apt-get install openssh-server
