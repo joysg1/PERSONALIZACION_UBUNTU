@@ -1,6 +1,12 @@
+++ INSTALAR OPEN SSH
+
+sudo apt-get install openssh-server
+
+
 ++ INSTALAR WHOIS
 
 sudo apt install whois
+
 
 ++ INSTALAR OPEN VPN
 
