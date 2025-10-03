@@ -1,32 +1,26 @@
 ++ INSTALAR FILEZILLA
-
 sudo apt-get install filezilla
 
 
 
 ++ INSTALAR OPEN SSH
-
 sudo apt-get install openssh-server
 
 
 ++ INSTALAR WHOIS
-
 sudo apt install whois
 
 
 ++ INSTALAR OPEN VPN
-
 sudo apt get install openvpn
 
 
 ++ INSTALAR TEMA NUMIX
-
 sudo apt update
 sudo apt install snapd
 sudo snap install numix-icon-theme
 
 ++ INSTALAR TEMA PAPIRUS
-
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt-get update
 sudo apt-get install papirus-icon-theme
@@ -34,106 +28,86 @@ sudo apt-get install epapirus-icon-theme
 
 
 ++ INSTALAR CONKY MANAGER
-
 sudo add-apt-repository ppa:ubuntuhandbook1/conkymanager2
 sudo apt update 
 sudo apt install conky-manager2
 
 
 ++ INSTALAR GOOGLE CHROME
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 ++ INSTALAR TEMA FLAT REMIX
-
 sudo snap install flat-remix
 
 
 ++ INSTALAR IMAGEMAGICK
-
 sudo apt-get install imagemagick
 
 
 
 ++ RUTA DE LOS ICONOS
-
 /usr/share/icons (Recordar para instalar temas)
 
 
 ++ INSTALAR GRUB-CUSTOMIZER
-
 sudo apt install grub-customizer
 
 
 ++ INSTALAR GNOME-TWEAK-TOOL
-
 sudo apt-get install gnome-tweaks
 
 
 ++ INSTALAR GPARTED
-
 sudo apt-get install gparted
 
 
 ++ INSTALAR ARK
-
 sudo apt-get install ark
 
 
 ++ INSTALAR CLONEZILLA
-
 sudo apt-get install clonezilla
 
 
 ++ INSTALAR GCHEMPAINT
-
 sudo apt-get install gchempaint
 
 
 ++ INSTALAR KDENLIVE
-
 sudo apt-get install kdenlive
 
 
 ++ INSTALAR MARBLE
-
 sudo apt-get install marble
 
 
 ++ INSTALAR KMPLOT
-
 sudo apt-get install kmplot
 
 
 ++ INSTALAR UBUNTU-RESTRICTED-EXTRAS
-
 sudo apt-get install ubuntu-restricted-extras
 
 
 ++ INSTALAR LIBREOFFICE (ESPAÑOL)
-
 sudo apt-get install libreoffice libreoffice-help-es libreoffice-l10n-es
 
 
 ++ INSTALAR ARDUINO
-
 sudo apt-get install arduino
 
 
 ++ INSTALAR KALZIUM
-
 sudo apt-get install kalzium
 
 
 ++ INSTALAR FRITZING
-
 sudo apt-get install fritzing
 
 
 ++ INSTALAR NEOFETCH
-
 sudo apt install neofetch
 neofetch
 sudo su
@@ -146,12 +120,10 @@ nano ~/.config/neofetch/config.conf
 
 
 ++ INSTALAR PIP
-
 sudo apt-get install python3-pip
 
 
 ++ INSTALAR LIBRERIAS DE PYTHON
-
 pip install pandas --break-system-packages
 pip install numpy --break-system-packages
 pip install matplotlib --break-system-packages
@@ -173,11 +145,9 @@ pip3 install wxpython --break-system-packages
 ---------------------------------
 
 ++ Comando para instalar todas a la vez: 
-
 pip install pandas numpy matplotlib seaborn plotly pygame tk bokeh scipy scikit-learn pyinstaller imbalanced-learn --break-system-packages
 
 ++ Comando para comprobar la instalacion listando las librerias:
-
 pip list
 
 
@@ -186,95 +156,77 @@ pip list --outdated  | cut -d = -f 1 | xargs -n1 pip install -U --break-system-p
 
 
 ++ INSTALAR OBS STUDIO
-
 sudo apt-get install obs-studio
 
 
 
 ++ INSTALAR QBITTORRENT
-
 sudo apt-get install qbittorrent
 sudo snap install qbittorrent-arnatious
 
 
 ++ INSTALAR SNAPD
-
 sudo apt install snapd
 
 
 ++ INSTALAR BLUEMAIL
-
 sudo snap install bluemail
 
 
 
 ++ INSTALAR VISUAL STUDIO CODE
-
 sudo snap install code --classic
 
 
 ++ INSTALAR NOTEPAD
-
 sudo snap install notepad-plus-plus
 
 
 ++ INSTALAR ECLIPSE
-
 sudo snap install eclipse --classic
 
 
 ++ INSTALAR NETBEANS
-
 sudo snap install netbeans --classic
 
 
 ++ INSTALAR SUBLIME TEXT
-
 sudo snap install sublime-text --classic
 
 
 ++ INSTALAR ANDROID STUDIO
-
 sudo snap install android-studio --classic
 
 
 ++ INSTALAR TELEGRAM
-
 sudo snap install telegram-desktop
 
 
 ++ INSTALAR WHATSIE
-
 sudo snap install whatsie
 
 
 ++ INSTALAR ZOOM
-
 sudo snap install zoom-client
 
 
 ++ INSTALAR TEAMS
-
 sudo snap install teams-for-linux
 
 
 ++ INSTALAR SPOTIFY
-
 sudo snap install spotify
 
 
 ++ INSTALAR AUDACITY
-
 sudo snap install audacity
 
 
 ++ INSTALAR PLAYARY
-
 sudo snap install playary
 
 
 ++ INSTALAR POPCORNTIME
-
 wget -c https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip
 
 sudo mkdir /opt/popcorn-time
@@ -299,120 +251,97 @@ Categories = Application;
 
 
 ++ INSTALAR HTOP
-
 sudo snap install htop
 
 
 ++ INSTALAR GLATE (TRADUCTOR)
-
 sudo snap install glate
 
 
 ++ INSTALAR OPERA
-
 sudo snap install opera
 
 
 ++ INSTALAR FREEMIND
-
 sudo snap install freemind
 
 
 ++ INSTALAR PLOTS
-
 sudo snap install plots
 
 
 ++ INSTALAR MAPASCII (Mapa en linea de comandos)
-
 sudo snap install mapscii
 
 
 ++ INSTALAR VLC
-
 sudo snap install vlc
 
 
 ++ INSTALAR SHOTCUT
-
 sudo snap install shotcut --classic
 
 
 ++ INSTALAR CHEESE
-
 sudo snap install cheese
 
 
 ++ INSTALAR SIMPLE-SCAN
-
 sudo apt-get install simple-scan
 
 
 ++ INSTALAR LABPLOT
-
 sudo snap install labplot
 
 
 ++ INSTALAR PYRESISTORS
-
 sudo snap install pyresistors
 
 
 ++ INSTALAR HEIMER (MIND MAP)
-
 sudo snap install heimer
 
 
 ++ INSTALAR STELLARIUM
-
 sudo snap install stellarium-daily
 
 
 ++ INSTALAR ULTIMATE VIDEO DOWNLOADER
-
 sudo snap install ultimate-media-downloader
 
 
 ++ INSTALAR KSTARS
-
 sudo snap install kstars
 
 
 ++ INSTALAR WEKA
-
 sudo snap install weka
 
 
 ++ INSTALAR QALCULATE
-
 sudo snap install qalculate
 
 
 ++ INSTALAR MAPTON
-
 sudo snap install mapton
 
 
 ++ INSTALAR GRAPHS
-
 sudo snap install graphs
 
 
 ++ INSTALAR NWIPE
-
 sudo apt install nwipe
 sudo nwipe
 
 
 ++ INSTALAR PHOTOREC
-
 sudo apt -y install testdisk
 sudo photorec
 Tutorial_completo_de_uso: https://www.digitalocean.com/community/tutorials/photorec-recover-deleted-files-in-linux-ubuntu
 
 
 ++ INSTALAR FREE-OFFICE
-
 sudo -i
 mkdir -p /etc/apt/keyrings
 wget -qO- https://shop.softmaker.com/repo/linux-repo-public.key | gpg --dearmor > /etc/apt/keyrings/softmaker.gpg
@@ -422,12 +351,10 @@ apt install softmaker-freeoffice-2024
 
 
 ++ INSTALAR GDEBI
-
 sudo apt-get install gdebi
 
 
 ++ INSTALAR VIRTUALBOX
-
 Realizar el proceso bajando el .deb de la pagina web, agregar el usuario al grupo y luego instalar las extensiones. 
 
 
@@ -437,12 +364,10 @@ newgrp vboxusers
 
 
 ++ INSTALAR SYNAPTIC
-
 sudo apt-get install synaptic apt-xapian-index software-properties-gtk
 
 
 ++ INSTALAR CHEMCANVAS
-
 Bajarlo desde la siguiente pagina: https://github.com/ksharindam/chemcanvas?tab=readme-ov-file
 
 Recordar bajar el appimage y darle permisos de ejecucion con:
@@ -454,36 +379,30 @@ https://docs.appimage.org/user-guide/troubleshooting/fuse.html
 
 
 ++ INSTALAR DESCOMPRESOR 7ZIP
-
 sudo apt-get install p7zip-full
 
 7z x PACKAGE.7z <para descomprimir un archivo una vez estemos en la ruta>
 
 
 ++ INSTALAR VARIETY (GESTOR DE FONDOS)
-
 sudo add-apt-repository ppa:variety/stable
 sudo apt update
 sudo apt install variety
 
 
 ++ HABILITAR SOPORTE PPA
-
 sudo apt install software-properties-common
 
 
 ++ BUSQUEDA DE MAS SNAPS
-
 https://snapcraft.io/
 
 
 ++ TRANSFORMAR VHDX a VDI 
-
 VBoxManage clonemedium disk /home/userle/nom.VHDX /home/userle/nom.vdi --format VDI
 
 
 ++ DESFRAGMENTAR DISCO DURO 
-
 sudo e4defrag /dev/sda*  
 --- Nota: podemos reemplazar sda por la unidad correspondiente, el * significa que se seleccionan todas las particiones.
 
@@ -493,12 +412,10 @@ sudo e4defrag /dev/sda*
 
 
 ++ LISTAR DISCOS
-
 sudo fdisk --list
 
 
 ++ INSTALAR PAQUETES EDUCATIVOS
-
 sudo apt-get install astro-education
 
 sudo apt-get install ezgo-education
@@ -511,24 +428,20 @@ sudo apt-get install kdeedu
 
 
 ++ INSTALAR FIRMWARE UPDATER:
-
 sudo snap install firmware-updater
 
 
 ++ INSTALAR REMMINA
-
 sudo apt-get install remmina
 
 --- Nota: este cliente sirve para acceder via rdp de manera muy optima.
 
 
 ++ MONTAR ARCHIVOS VHDX:
-
 guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
 
 
 ++ PONER CONTRASEÑA A PIHOLE:
-
 sudo pihole setpassword 
 
 --- Nota: Actualmente pihole esta instalado en ubuntu, por ende es recomendable actualizar 
@@ -538,20 +451,17 @@ el pihole no ocasione perdidas de conexion o problemas.
 
 
 ++ SOLUCIONAR ERRORES DE PAQUETES ROTOS:
-
 sudo apt clean
 sudo apt autoremove
 
 
 ++ INSTALAR SMARTOOLS (HERRAMIENTA PARA DIAGNOSTICAR DISCOS DUROS EN LINUX)
-
 sudo apt install smartmontools
 sudo smartctl -t short /dev/sdX (Ejecutar la prueba)
 sudo smartctl -a /dev/sdX (Ver resultados de la prueba, recordar esperar unos minutos)
 
 
 ++ CONVERTIR VHDX a VDI (PARA MONTAR EN VIRTUALBOX)
-
 Nota: recordar usar medicat para generar el VHDX
 Comando: VBoxManage clonehd /ruta/al/archivo.VHDX /ruta/al/nuevo_archivo.vdi --format vdi
 
