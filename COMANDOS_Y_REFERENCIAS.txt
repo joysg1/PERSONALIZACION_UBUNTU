@@ -1,3 +1,9 @@
+++ INSTALAR FILEZILLA
+
+sudo apt-get install filezilla
+
+
+
 ++ INSTALAR OPEN SSH
 
 sudo apt-get install openssh-server
