@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Completo de Comandos Ubuntu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e1e5e9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #e95420 0%, #dd4814 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circle" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23circle)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .ubuntu-logo {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            color: #f8f9fa;
+            font-weight: 300;
+        }
+        
+        nav {
+            background: rgba(233, 84, 32, 0.95);
+            padding: 18px 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dd4814;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 35px;
+            gap: 35px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #e1e5e9;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .content {
+            flex: 3;
+            min-width: 320px;
+        }
+        
+        h2 {
+            color: #e95420;
+            border-bottom: 3px solid #e95420;
+            padding-bottom: 15px;
+            margin: 35px 0 25px;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: #dd4814;
+            margin: 28px 0 18px;
+            font-size: 1.4rem;
+        }
+        
+        .category {
+            margin-bottom: 45px;
+            background: #f8f9fa;
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 6px solid #e95420;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .category:hover {
+            transform: translateX(5px);
+        }
+        
+        .command {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 10px;
+            border-left: 5px solid #e95420;
+            border: 1px solid #e1e5e9;
+            transition: all 0.3s ease;
+        }
+        
+        .command:hover {
+            border-color: #e95420;
+            box-shadow: 0 6px 20px rgba(233, 84, 32, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .command code {
+            background: rgba(233, 84, 32, 0.1);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-family: 'Ubuntu Mono', monospace;
+            color: #e95420;
+            font-weight: bold;
+            border: 1px solid rgba(233, 84, 32, 0.2);
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .command-desc {
+            margin-top: 12px;
+            color: #495057;
+            line-height: 1.6;
+        }
+        
+        .sub-command {
+            margin-left: 28px;
+            background: rgba(233, 84, 32, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-left: 4px solid #dd4814;
+        }
+        
+        .sub-command code {
+            color: #dd4814;
+            background: rgba(221, 72, 20, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c2c2c;
+            color: #adb5bd;
+            margin-top: 50px;
+            border-top: 1px solid #e95420;
+        }
+        
+        .search-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        #search {
+            width: 100%;
+            max-width: 550px;
+            padding: 18px 25px;
+            background: white;
+            border: 2px solid rgba(233, 84, 32, 0.3);
+            border-radius: 30px;
+            font-size: 16px;
+            color: #333;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        #search:focus {
+            outline: none;
+            border-color: #e95420;
+            box-shadow: 0 0 25px rgba(233, 84, 32, 0.3);
+        }
+        
+        #search::placeholder {
+            color: #6c757d;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #ffd166, #e95420);
+            color: white;
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        
+        .ubuntu-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e95420, #dd4814);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .python-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3776ab, #306998);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .system-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                margin-right: 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Efectos especiales */
+        .terminal-effect {
+            position: relative;
+        }
+        
+        .terminal-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #e95420;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f3f5;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #e95420, #dd4814);
+            border-radius: 8px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #dd4814, #c13c0c);
+        }
+        
+        /* Índice mejorado */
+        .index-item {
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #e95420;
+            transition: all 0.3s ease;
+        }
+        
+        .index-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(233, 84, 32, 0.2);
+        }
+        
+        .index-link {
+            color: #495057;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+        }
+        
+        .index-link:hover {
+            color: #e95420;
+        }
+
+        /* Grid para librerías Python */
+        .python-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .python-lib {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3776ab;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .python-lib code {
+            background: rgba(55, 118, 171, 0.1);
+            color: #3776ab;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        .lib-desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ubuntu <span class="ubuntu-logo">⚬</span> Commands</h1>
+            <p class="subtitle">Manual completo de instalación y configuración para Ubuntu Desktop</p>
+        </header>
+        
+        <nav>
+            <div class="nav-container">
+                <a href="#herramientas" class="nav-item">Herramientas</a>
+                <a href="#temas" class="nav-item">Temas</a>
+                <a href="#python" class="nav-item">Python</a>
+                <a href="#multimedia" class="nav-item">Multimedia</a>
+                <a href="#desarrollo" class="nav-item">Desarrollo</a>
+                <a href="#sistema" class="nav-item">Sistema</a>
+                <a href="#comunicacion" class="nav-item">Comunicación</a>
+            </div>
+        </nav>
+        
+        <div class="search-container">
+            <input type="text" id="search" placeholder="user@ubuntu:~$ Buscar comandos de instalación...">
+        </div>
+        
+        <main>
+            <div class="sidebar">
+                <h2>Índice de Categorías</h2>
+                <div id="index-list">
+                    <!-- El índice se generará automáticamente con JavaScript -->
+                </div>
+            </div>
+            
+            <div class="content" id="content">
+                <!-- Herramientas del sistema -->
+                <div class="category" id="herramientas">
+                    <h2>Herramientas del Sistema <span class="ubuntu-badge">TOOLS</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install filezilla</code>
+                        <div class="command-desc">Instalar FileZilla - Cliente FTP</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install socat</code>
+                        <div class="command-desc">Instalar Socat (similar a Telnet)</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install openssh-server</code>
+                        <div class="command-desc">Instalar servidor SSH</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt install whois</code>
+                        <div class="command-desc">Instalar herramienta WHOIS</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt install openvpn</code>
+                        <div class="command-desc">Instalar cliente OpenVPN</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install gparted</code>
+                        <div class="command-desc">Instalar editor de particiones</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install ark</code>
+                        <div class="command-desc">Instalar gestor de archivos comprimidos</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install synaptic</code>
+                        <div class="command-desc">Instalar gestor de paquetes gráfico</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install gdebi</code>
+                        <div class="command-desc">Instalar gestor de paquetes .deb</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install p7zip-full</code>
+                        <div class="command-desc">Instalar descompresor 7zip</div>
+                        <div class="sub-command">
+                            <code>7z x PACKAGE.7z</code> - Descomprimir archivo 7z
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt install software-properties-common</code>
+                        <div class="command-desc">Habilitar soporte para PPA</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt install snapd</code>
+                        <div class="command-desc">Instalar soporte para Snap</div>
+                    </div>
+                </div>
+
+                <!-- Temas y personalización -->
+                <div class="category" id="temas">
+                    <h2>Temas y Personalización <span class="ubuntu-badge">THEMES</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo apt update</code>
+                        <div class="command-desc">Actualizar lista de paquetes</div>
+                        <div class="sub-command">
+                            <code>sudo apt install snapd</code> - Instalar Snap
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo snap install numix-icon-theme</code> - Tema de iconos Numix
+                        </div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo add-apt-repository ppa:papirus/papirus</code>
+                        <div class="command-desc">Agregar repositorio Papirus</div>
+                        <div class="sub-command">
+                            <code>sudo apt-get update</code> - Actualizar repositorios
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install papirus-icon-theme</code> - Tema Papirus
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install epapirus-icon-theme</code> - Tema Papirus extendido
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install flat-remix</code>
+                        <div class="command-desc">Instalar tema Flat Remix</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo add-apt-repository ppa:variety/stable</code>
+                        <div class="command-desc">Agregar repositorio Variety</div>
+                        <div class="sub-command">
+                            <code>sudo apt update</code>
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt install variety</code> - Instalar gestor de fondos
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo add-apt-repository ppa:ubuntuhandbook1/conkymanager2</code>
+                        <div class="command-desc">Agregar repositorio Conky Manager</div>
+                        <div class="sub-command">
+                            <code>sudo apt update</code>
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt install conky-manager2</code> - Instalar Conky Manager
+                        </div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt install grub-customizer</code>
+                        <div class="command-desc">Personalizar menú GRUB</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install gnome-tweaks</code>
+                        <div class="command-desc">Herramientas de personalización GNOME</div>
+                    </div>
+
+                    <div class="command">
+                        <code>/usr/share/icons</code>
+                        <div class="command-desc">Ruta donde se instalan los temas de iconos</div>
+                    </div>
+                </div>
+
+                <!-- Librerías Python -->
+                <div class="category" id="python">
+                    <h2>Librerías Python <span class="python-badge">PYTHON</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install python3-pip</code>
+                        <div class="command-desc">Instalar pip para Python 3</div>
+                    </div>
+
+                    <h3>Instalación Individual de Librerías</h3>
+                    <div class="python-grid">
+                        <div class="python-lib">
+                            <code>pip install pandas --break-system-packages</code>
+                            <div class="lib-desc">Análisis de datos y manipulación</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install numpy --break-system-packages</code>
+                            <div class="lib-desc">Cálculos numéricos y arrays</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install matplotlib --break-system-packages</code>
+                            <div class="lib-desc">Visualización y gráficos 2D/3D</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install seaborn --break-system-packages</code>
+                            <div class="lib-desc">Visualización estadística avanzada</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install plotly --break-system-packages</code>
+                            <div class="lib-desc">Gráficos interactivos y dashboards</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install pygame --break-system-packages</code>
+                            <div class="lib-desc">Desarrollo de videojuegos</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install tk --break-system-packages</code>
+                            <div class="lib-desc">Interfaces gráficas (GUI)</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install bokeh --break-system-packages</code>
+                            <div class="lib-desc">Visualización web interactiva</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install scipy --break-system-packages</code>
+                            <div class="lib-desc">Computación científica y técnica</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install scikit-learn --break-system-packages</code>
+                            <div class="lib-desc">Machine learning y data mining</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install pyinstaller --break-system-packages</code>
+                            <div class="lib-desc">Crear ejecutables desde scripts</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install imbalanced-learn --break-system-packages</code>
+                            <div class="lib-desc">Manejo de datos desbalanceados</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install nltk --break-system-packages</code>
+                            <div class="lib-desc">Procesamiento de lenguaje natural</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install pillow --break-system-packages</code>
+                            <div class="lib-desc">Procesamiento de imágenes</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install wikipedia --break-system-packages</code>
+                            <div class="lib-desc">Acceso a API de Wikipedia</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip install wolframalpha --break-system-packages</code>
+                            <div class="lib-desc">Acceso a API de Wolfram Alpha</div>
+                        </div>
+                        <div class="python-lib">
+                            <code>pip3 install wxpython --break-system-packages</code>
+                            <div class="lib-desc">Toolkit para interfaces gráficas</div>
+                        </div>
+                    </div>
+
+                    <h3>Comandos Útiles para Python</h3>
+                    <div class="command">
+                        <code>pip install pandas numpy matplotlib seaborn plotly pygame tk bokeh scipy scikit-learn pyinstaller imbalanced-learn --break-system-packages</code>
+                        <div class="command-desc">Instalar todas las librerías principales a la vez</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pip list</code>
+                        <div class="command-desc">Listar todas las librerías instaladas</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pip list --outdated</code>
+                        <div class="command-desc">Mostrar librerías desactualizadas</div>
+                    </div>
+
+                    <div class="command">
+                        <code>pip list --outdated | cut -d = -f 1 | xargs -n1 pip install -U --break-system-packages</code>
+                        <div class="command-desc">Actualizar todas las librerías a la vez</div>
+                    </div>
+                </div>
+                
+                <!-- Multimedia -->
+                <div class="category" id="multimedia">
+                    <h2>Multimedia y Entretenimiento <span class="ubuntu-badge">MEDIA</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install imagemagick</code>
+                        <div class="command-desc">Instalar ImageMagick - Manipulación de imágenes</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install obs-studio</code>
+                        <div class="command-desc">Instalar OBS Studio - Grabación y streaming</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install qbittorrent</code>
+                        <div class="command-desc">Instalar qBittorrent (APT)</div>
+                        <div class="sub-command">
+                            <code>sudo snap install qbittorrent-arnatious</code> - Instalar qBittorrent (Snap)
+                        </div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install vlc</code>
+                        <div class="command-desc">Instalar reproductor VLC</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install spotify</code>
+                        <div class="command-desc">Instalar Spotify</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install audacity</code>
+                        <div class="command-desc">Editor de audio Audacity</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install shotcut --classic</code>
+                        <div class="command-desc">Editor de video Shotcut</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install cheese</code>
+                        <div class="command-desc">Aplicación de cámara Cheese</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install kdenlive</code>
+                        <div class="command-desc">Editor de video Kdenlive</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install playary</code>
+                        <div class="command-desc">Instalar Playary - Reproductor multimedia</div>
+                    </div>
+
+                    <div class="command">
+                        <code>wget -c https://github.com/popcorn-official/popcorn-desktop/releases/download/v0.5.1/Popcorn-Time-0.5.1-linux64.zip</code>
+                        <div class="command-desc">Descargar Popcorn Time</div>
+                        <div class="sub-command">
+                            <code>sudo mkdir /opt/popcorn-time</code> - Crear directorio
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt update && sudo apt install unzip libcanberra-gtk-module libgconf-2-4 libatomic1</code> - Instalar dependencias
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo unzip Popcorn-Time-0.5.1-linux64.zip -d /opt/popcorn-time</code> - Descomprimir
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time</code> - Crear enlace
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo nano /usr/share/applications/popcorntime.desktop</code> - Crear acceso directo
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desarrollo -->
+                <div class="category" id="desarrollo">
+                    <h2>Desarrollo y Programación <span class="ubuntu-badge">DEV</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo snap install code --classic</code>
+                        <div class="command-desc">Instalar Visual Studio Code</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install notepad-plus-plus</code>
+                        <div class="command-desc">Instalar Notepad++</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install eclipse --classic</code>
+                        <div class="command-desc">Instalar Eclipse IDE</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install netbeans --classic</code>
+                        <div class="command-desc">Instalar NetBeans</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install arduino</code>
+                        <div class="command-desc">Instalar IDE Arduino</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install sublime-text --classic</code>
+                        <div class="command-desc">Instalar Sublime Text</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install android-studio --classic</code>
+                        <div class="command-desc">Instalar Android Studio</div>
+                    </div>
+                </div>
+
+                <!-- Comunicación -->
+                <div class="category" id="comunicacion">
+                    <h2>Comunicación y Redes <span class="ubuntu-badge">COMMS</span></h2>
+                    
+                    <div class="command">
+                        <code>sudo snap install telegram-desktop</code>
+                        <div class="command-desc">Instalar Telegram Desktop</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install whatsie</code>
+                        <div class="command-desc">Cliente WhatsApp</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install zoom-client</code>
+                        <div class="command-desc">Instalar Zoom</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install teams-for-linux</code>
+                        <div class="command-desc">Cliente Microsoft Teams</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo snap install bluemail</code>
+                        <div class="command-desc">Cliente de correo BlueMail</div>
+                    </div>
+                    
+                    <div class="command">
+                        <code>sudo apt-get install remmina</code>
+                        <div class="command-desc">Cliente de escritorio remoto</div>
+                        <div class="note">Este cliente sirve para acceder via RDP de manera muy óptima</div>
+                    </div>
+                </div>
+
+                <!-- Sistema y Utilidades -->
+                <div class="category" id="sistema">
+                    <h2>Sistema y Utilidades <span class="system-badge">SYSTEM</span></h2>
+
+                    <div class="command">
+                        <code>sudo apt install neofetch</code>
+                        <div class="command-desc">Instalar Neofetch - Info del sistema</div>
+                        <div class="sub-command">
+                            <code>neofetch</code> - Ejecutar Neofetch
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo su</code> - Cambiar a superusuario
+                        </div>
+                        <div class="sub-command">
+                            <code>/etc/bash.bashrc</code> - Archivo de configuración del sistema
+                        </div>
+                        <div class="sub-command">
+                            <code>nano bash.bashrc</code> - Editar configuración (agregar "neofetch" al final)
+                        </div>
+                        <div class="sub-command">
+                            <code>nano ~/.config/neofetch/config.conf</code> - Archivo para editar configuraciones
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install ubuntu-restricted-extras</code>
+                        <div class="command-desc">Instalar codecs y software adicional</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install libreoffice libreoffice-help-es libreoffice-l10n-es</code>
+                        <div class="command-desc">Instalar LibreOffice en español</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install simple-scan</code>
+                        <div class="command-desc">Instalar Simple Scan - Escáner de documentos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install htop</code>
+                        <div class="command-desc">Instalar htop - Monitor del sistema</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install glate</code>
+                        <div class="command-desc">Instalar Glate - Traductor</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install opera</code>
+                        <div class="command-desc">Instalar Opera Browser</div>
+                    </div>
+
+                    <div class="command">
+                        <code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</code>
+                        <div class="command-desc">Descargar Google Chrome</div>
+                        <div class="sub-command">
+                            <code>sudo dpkg -i google-chrome-stable_current_amd64.deb</code> - Instalar Chrome
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas Científicas y Educativas -->
+                <div class="category" id="cientificas">
+                    <h2>Herramientas Científicas <span class="ubuntu-badge">SCIENCE</span></h2>
+
+                    <div class="command">
+                        <code>sudo apt-get install kalzium</code>
+                        <div class="command-desc">Instalar Kalzium - Tabla periódica</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install fritzing</code>
+                        <div class="command-desc">Instalar Fritzing - Diseño de circuitos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install gchempaint</code>
+                        <div class="command-desc">Instalar GChemPaint - Editor de moléculas</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install marble</code>
+                        <div class="command-desc">Instalar Marble - Atlas geográfico</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install kmplot</code>
+                        <div class="command-desc">Instalar KmPlot - Graficador de funciones</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install clonezilla</code>
+                        <div class="command-desc">Instalar Clonezilla - Clonación de discos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install freemind</code>
+                        <div class="command-desc">Instalar FreeMind - Mapas mentales</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install plots</code>
+                        <div class="command-desc">Instalar Plots - Graficador matemático</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install mapscii</code>
+                        <div class="command-desc">Instalar MapSCII - Mapas en línea de comandos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install labplot</code>
+                        <div class="command-desc">Instalar LabPlot - Análisis y visualización de datos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install pyresistors</code>
+                        <div class="command-desc">Instalar PyResistors - Calculadora de resistencias</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install heimer</code>
+                        <div class="command-desc">Instalar Heimer - Editor de mapas mentales</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install stellarium-daily</code>
+                        <div class="command-desc">Instalar Stellarium - Planetario</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install ultimate-media-downloader</code>
+                        <div class="command-desc">Instalar Ultimate Video Downloader</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install kstars</code>
+                        <div class="command-desc">Instalar KStars - Simulador astronómico</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install weka</code>
+                        <div class="command-desc">Instalar Weka - Machine Learning</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install qalculate</code>
+                        <div class="command-desc">Instalar Qalculate - Calculadora científica</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install mapton</code>
+                        <div class="command-desc">Instalar Mapton - Mapas y navegación</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install graphs</code>
+                        <div class="command-desc">Instalar Graphs - Graficador de funciones</div>
+                    </div>
+                </div>
+
+                <!-- Mantenimiento del Sistema -->
+                <div class="category" id="mantenimiento">
+                    <h2>Mantenimiento del Sistema <span class="system-badge">MAINTENANCE</span></h2>
+
+                    <div class="command">
+                        <code>sudo apt install nwipe</code>
+                        <div class="command-desc">Instalar nwipe - Borrado seguro de discos</div>
+                        <div class="sub-command">
+                            <code>sudo nwipe</code> - Ejecutar nwipe
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt -y install testdisk</code>
+                        <div class="command-desc">Instalar TestDisk - Recuperación de datos</div>
+                        <div class="sub-command">
+                            <code>sudo photorec</code> - Ejecutar PhotoRec
+                        </div>
+                        <div class="note">
+                            Tutorial completo de uso: 
+                            <a href="https://www.digitalocean.com/community/tutorials/photorec-recover-deleted-files-in-linux-ubuntu" target="_blank">
+                                https://www.digitalocean.com/community/tutorials/photorec-recover-deleted-files-in-linux-ubuntu
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt install smartmontools</code>
+                        <div class="command-desc">Instalar SMARTools - Diagnóstico de discos duros</div>
+                        <div class="sub-command">
+                            <code>sudo smartctl -t short /dev/sdX</code> - Ejecutar prueba corta
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo smartctl -a /dev/sdX</code> - Ver resultados de la prueba
+                        </div>
+                        <div class="note">Recordar esperar unos minutos para ver los resultados</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo e4defrag /dev/sda*</code>
+                        <div class="command-desc">Desfragmentar disco duro</div>
+                        <div class="note">
+                            Podemos reemplazar sda por la unidad correspondiente, el * significa que se seleccionan todas las particiones.<br>
+                            La desfragmentación de unidades exfat no está oficialmente soportada en linux.<br>
+                            Es recomendable realizar la desfragmentación cada mes, no con tanta frecuencia.
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo fdisk --list</code>
+                        <div class="command-desc">Listar discos y particiones del sistema</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt clean</code>
+                        <div class="command-desc">Limpiar caché de paquetes</div>
+                        <div class="sub-command">
+                            <code>sudo apt autoremove</code> - Eliminar paquetes no necesarios
+                        </div>
+                        <div class="note">Solución para errores de paquetes rotos</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo snap install firmware-updater</code>
+                        <div class="command-desc">Instalar actualizador de firmware</div>
+                    </div>
+                </div>
+
+                <!-- Virtualización -->
+                <div class="category" id="virtualizacion">
+                    <h2>Virtualización <span class="ubuntu-badge">VIRTUAL</span></h2>
+
+                    <div class="command">
+                        <code>sudo usermod -aG vboxusers $USER</code>
+                        <div class="command-desc">Agregar usuario al grupo de VirtualBox</div>
+                        <div class="sub-command">
+                            <code>newgrp vboxusers</code> - Actualizar grupos del usuario
+                        </div>
+                        <div class="note">
+                            Realizar el proceso bajando el .deb de la página web, agregar el usuario al grupo y luego instalar las extensiones.
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>VBoxManage clonemedium disk /home/userle/nom.VHDX /home/userle/nom.vdi --format VDI</code>
+                        <div class="command-desc">Transformar VHDX a VDI para VirtualBox</div>
+                        <div class="note">Recordar usar medicat para generar el VHDX</div>
+                    </div>
+
+                    <div class="command">
+                        <code>VBoxManage clonehd /ruta/al/archivo.VHDX /ruta/al/nuevo_archivo.vdi --format vdi</code>
+                        <div class="command-desc">Alternativa para convertir VHDX a VDI</div>
+                    </div>
+
+                    <div class="command">
+                        <code>guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory</code>
+                        <div class="command-desc">Montar archivos VHDX en el sistema</div>
+                    </div>
+                </div>
+
+                <!-- Software Adicional -->
+                <div class="category" id="software">
+                    <h2>Software Adicional <span class="ubuntu-badge">SOFTWARE</span></h2>
+
+                    <div class="command">
+                        <code>sudo -i</code>
+                        <div class="command-desc">Instalar FreeOffice</div>
+                        <div class="sub-command">
+                            <code>mkdir -p /etc/apt/keyrings</code> - Crear directorio de claves
+                        </div>
+                        <div class="sub-command">
+                            <code>wget -qO- https://shop.softmaker.com/repo/linux-repo-public.key | gpg --dearmor > /etc/apt/keyrings/softmaker.gpg</code> - Descargar clave
+                        </div>
+                        <div class="sub-command">
+                            <code>echo "deb [signed-by=/etc/apt/keyrings/softmaker.gpg] https://shop.softmaker.com/repo/apt stable non-free" > /etc/apt/sources.list.d/softmaker.list</code> - Agregar repositorio
+                        </div>
+                        <div class="sub-command">
+                            <code>apt update</code> - Actualizar repositorios
+                        </div>
+                        <div class="sub-command">
+                            <code>apt install softmaker-freeoffice-2024</code> - Instalar FreeOffice 2024
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install synaptic apt-xapian-index software-properties-gtk</code>
+                        <div class="command-desc">Instalar Synaptic con dependencias</div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo chmod +x &lt;nombre_archivo&gt;</code>
+                        <div class="command-desc">Dar permisos de ejecución a AppImage</div>
+                        <div class="sub-command">
+                            <code>./&lt;nombre_archivo&gt;</code> - Ejecutar AppImage
+                        </div>
+                        <div class="note">
+                            ChemCanvas: Bajarlo desde 
+                            <a href="https://github.com/ksharindam/chemcanvas?tab=readme-ov-file" target="_blank">GitHub</a><br>
+                            Si aparecen errores de fuse, seguir este tutorial:
+                            <a href="https://docs.appimage.org/user-guide/troubleshooting/fuse.html" target="_blank">Solución de errores FUSE</a>
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo apt-get install astro-education</code>
+                        <div class="command-desc">Instalar paquetes educativos de astronomía</div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install ezgo-education</code> - Paquete educativo EzGo
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install games-education</code> - Juegos educativos
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install junior-education</code> - Educación para niños
+                        </div>
+                        <div class="sub-command">
+                            <code>sudo apt-get install kdeedu</code> - Suite educativa de KDE
+                        </div>
+                    </div>
+
+                    <div class="command">
+                        <code>sudo pihole setpassword</code>
+                        <div class="command-desc">Poner contraseña a PiHole</div>
+                        <div class="note">
+                            Actualmente PiHole está instalado en ubuntu, por ende es recomendable actualizar 
+                            el sistema cada domingo y mantener la jurisdicción de PiHole en la subred .5 no en la principal.
+                            Esto nos ayuda a que cuando se interrumpa la red o el suministro eléctrico, al volver estos
+                            el PiHole no ocasione pérdidas de conexión o problemas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursos Adicionales -->
+                <div class="category" id="recursos">
+                    <h2>Recursos Adicionales <span class="ubuntu-badge">RESOURCES</span></h2>
+
+                    <div class="command">
+                        <code>https://snapcraft.io/</code>
+                        <div class="command-desc">Busqueda de más snaps disponibles</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Ubuntu Desktop Commands Manual &copy; 2024 - Para la comunidad Ubuntu</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #e95420;">Linux for Human Beings</p>
+        </footer>
+    </div>
+
+    <script>
+        // Generar índice automáticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelectorAll('.category');
+            const indexList = document.getElementById('index-list');
+            
+            categories.forEach(category => {
+                const categoryId = category.id;
+                const categoryTitle = category.querySelector('h2').textContent;
+                
+                const listItem = document.createElement('div');
+                listItem.className = 'index-item';
+                
+                const link = document.createElement('a');
+                link.href = `#${categoryId}`;
+                
+                // Iconos diferentes para cada categoría
+                let icon = '📦';
+                if (categoryId === 'python') icon = '🐍';
+                else if (categoryId === 'multimedia') icon = '🎬';
+                else if (categoryId === 'desarrollo') icon = '💻';
+                else if (categoryId === 'sistema') icon = '⚙️';
+                else if (categoryId === 'comunicacion') icon = '📞';
+                else if (categoryId === 'navegadores') icon = '🌐';
+                else if (categoryId === 'temas') icon = '🎨';
+                else if (categoryId === 'cientificas') icon = '🔬';
+                else if (categoryId === 'mantenimiento') icon = '🔧';
+                else if (categoryId === 'virtualizacion') icon = '💻';
+                else if (categoryId === 'software') icon = '📊';
+                else if (categoryId === 'recursos') icon = '📚';
+                
+                link.textContent = `${icon} ${categoryTitle.replace('TOOLS', '').replace('PYTHON', '').replace('THEMES', '').replace('MEDIA', '').replace('DEV', '').replace('COMMS', '').replace('UTILS', '').replace('BROWSERS', '').replace('SCIENCE', '').replace('MAINTENANCE', '').replace('VIRTUAL', '').replace('SOFTWARE', '').replace('RESOURCES', '').replace('SYSTEM', '').trim()}`;
+                link.className = 'index-link';
+                
+                listItem.appendChild(link);
+                indexList.appendChild(listItem);
+            });
+            
+            // Funcionalidad de búsqueda
+            const searchInput = document.getElementById('search');
+            const commands = document.querySelectorAll('.command');
+            const pythonLibs = document.querySelectorAll('.python-lib');
+            const notes = document.querySelectorAll('.note');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                // Buscar en comandos normales
+                commands.forEach(command => {
+                    const commandText = command.textContent.toLowerCase();
+                    const commandCode = command.querySelector('code');
+                    
+                    // Remover resaltado anterior
+                    if (commandCode) {
+                        commandCode.innerHTML = commandCode.textContent;
+                    }
+                    
+                    if (searchTerm === '') {
+                        command.style.display = 'block';
+                    } else if (commandText.includes(searchTerm)) {
+                        command.style.display = 'block';
+                        
+                        // Resaltar término de búsqueda
+                        if (commandCode) {
+                            const regex = new RegExp(searchTerm, 'gi');
+                            commandCode.innerHTML = commandCode.textContent.replace(regex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    } else {
+                        command.style.display = 'none';
+                    }
+                });
+
+                // Buscar en librerías Python
+                pythonLibs.forEach(lib => {
+                    const libText = lib.textContent.toLowerCase();
+                    const libCode = lib.querySelector('code');
+                    
+                    // Remover resaltado anterior
+                    if (libCode) {
+                        libCode.innerHTML = libCode.textContent;
+                    }
+                    
+                    if (searchTerm === '') {
+                        lib.style.display = 'block';
+                    } else if (libText.includes(searchTerm)) {
+                        lib.style.display = 'block';
+                        
+                        // Resaltar término de búsqueda
+                        if (libCode) {
+                            const regex = new RegExp(searchTerm, 'gi');
+                            libCode.innerHTML = libCode.textContent.replace(regex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    } else {
+                        lib.style.display = 'none';
+                    }
+                });
+
+                // Buscar en notas
+                notes.forEach(note => {
+                    const noteText = note.textContent.toLowerCase();
+                    
+                    if (searchTerm === '') {
+                        note.style.display = 'block';
+                    } else if (noteText.includes(searchTerm)) {
+                        note.style.display = 'block';
+                    } else {
+                        note.style.display = 'none';
+                    }
+                });
+            });
+
+            // Efecto de terminal en la búsqueda
+            searchInput.placeholder = "user@ubuntu:~$ Buscar comandos de instalación...";
+        });
+
+        // Efecto de escritura en el título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('h1');
+            title.classList.add('terminal-effect');
+        });
+    </script>
+</body>
+</html>
